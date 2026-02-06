@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,12 +14,14 @@
 
   <style>
     :root {
-      --primary: #ff6b35;
+      --primary: #40cca0;
       --dark: #1e1e1e;
       --light: #f5f5f5;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -29,15 +32,21 @@
     }
 
     header {
-      background: linear-gradient(135deg, #ff6b35, #ff9f68);
+      background: linear-gradient(135deg, #a5e14f, #ff9f68);
       color: white;
       padding: 80px 20px;
       text-align: center;
       animation: fadeIn 1.2s ease;
     }
 
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
 
     nav {
       position: sticky;
@@ -55,7 +64,9 @@
       font-weight: 600;
     }
 
-    nav a:hover { color: var(--primary); }
+    nav a:hover {
+      color: var(--primary);
+    }
 
     section {
       padding: 70px 10%;
@@ -75,14 +86,16 @@
     }
 
     .card {
-      background: white;
+      background: rgb(252, 242, 244);
       padding: 25px;
       border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       transition: transform .3s ease;
     }
 
-    .card:hover { transform: translateY(-8px); }
+    .card:hover {
+      transform: translateY(-8px);
+    }
 
     .card i {
       font-size: 2.2rem;
@@ -90,7 +103,10 @@
       margin-bottom: 15px;
     }
 
-    .price { font-weight: bold; color: var(--primary); }
+    .price {
+      font-weight: bold;
+      color: var(--primary);
+    }
 
     .coupon {
       background: #fff3ed;
@@ -109,268 +125,298 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes slideUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-      section { padding: 60px 6%; }
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1><i class="fa-solid fa-cube"></i> 3D Printing Hub</h1>
-  <p>Printers, tips, tricks, and savings for makers</p>
-</header>
+  <header>
+    <h1><i class="fa-solid fa-cube"></i> 3D Printing Hub</h1>
+    <p>Printers, tips, tricks, and savings for makers</p>
+  </header>
 
-<nav>
-  <a href="#tips">Tips</a>
-  <a href="#cheap">Cheap Printers</a>
-  <a href="#quality">Quality Printers</a>
-  <a href="#materials">Materials</a>
-  <a href="#failures">Problems</a>
-  <a href="#software">Software</a>
-  <a href="#comparison">Compare</a>
-  <a href="#calculator">Calculator</a>
-  <a href="#safety">Safety</a>
-</nav>
+  <nav>
+    <a href="#tips">Tips</a>
+    <a href="#cheap">Cheap Printers</a>
+    <a href="#quality">Quality Printers</a>
+    <a href="#materials">Materials</a>
+    <a href="#failures">Problems</a>
+    <a href="#software">Software</a>
+    <a href="#comparison">Compare</a>
+    <a href="#calculator">Calculator</a>
+    <a href="#safety">Safety</a>
+  </nav>
 
-<section id="tips">
-  <h2>Tips & Tricks</h2>
-  <div class="grid">
-    <div class="card">
-      <i class="fa-solid fa-layer-group"></i>
-      <h3>Layer Height</h3>
-      <p>Lower layer heights improve detail but increase print time.</p>
+  <section id="tips">
+    <h2>Tips & Tricks</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fa-solid fa-layer-group"></i>
+        <h3>Layer Height</h3>
+        <p>Lower layer heights improve detail but increase print time.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-temperature-high"></i>
+        <h3>Temperature Tuning</h3>
+        <p>Print temperature affects adhesion, strength, and stringing.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-wind"></i>
+        <h3>Cooling</h3>
+        <p>Proper cooling improves overhangs and surface quality.</p>
+      </div>
     </div>
-    <div class="card">
-      <i class="fa-solid fa-temperature-high"></i>
-      <h3>Temperature Tuning</h3>
-      <p>Print temperature affects adhesion, strength, and stringing.</p>
-    </div>
-    <div class="card">
-      <i class="fa-solid fa-wind"></i>
-      <h3>Cooling</h3>
-      <p>Proper cooling improves overhangs and surface quality.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="cheap">
-  <h2>Best Budget Printers</h2>
-  <div class="grid">
-    <div class="card">
-      <i class="fa-solid fa-money-bill"></i>
-      <h3>Creality Ender 3</h3>
-      <p>Popular beginner printer with huge community support.</p>
-      <p class="price">~$200</p>
+  <section id="cheap">
+    <h2>Best Budget Printers</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fa-solid fa-money-bill"></i>
+        <h3>Creality Ender 3</h3>
+        <p>Popular beginner printer with huge community support.</p>
+        <p class="price">~$200</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-tag"></i>
+        <h3>Anycubic Kobra Go</h3>
+        <p>Affordable printer with auto bed leveling.</p>
+        <p class="price">~$220</p>
+      </div>
     </div>
-    <div class="card">
-      <i class="fa-solid fa-tag"></i>
-      <h3>Anycubic Kobra Go</h3>
-      <p>Affordable printer with auto bed leveling.</p>
-      <p class="price">~$220</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="quality">
-  <h2>High Quality Printers</h2>
-  <div class="grid">
-    <div class="card">
-      <i class="fa-solid fa-gem"></i>
-      <h3>Prusa MK4</h3>
-      <p>Industry-leading reliability and print quality.</p>
-      <p class="price">~$800+</p>
+  <section id="quality">
+    <h2>High Quality Printers</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fa-solid fa-gem"></i>
+        <h3>Prusa MK4</h3>
+        <p>Industry-leading reliability and print quality.</p>
+        <p class="price">~$800+</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-rocket"></i>
+        <h3>Bambu Lab X1 Carbon</h3>
+        <p>Fast, enclosed, and highly automated.</p>
+        <p class="price">~$1200+</p>
+      </div>
     </div>
-    <div class="card">
-      <i class="fa-solid fa-rocket"></i>
-      <h3>Bambu Lab X1 Carbon</h3>
-      <p>Fast, enclosed, and highly automated.</p>
-      <p class="price">~$1200+</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="materials">
-  <h2>Filament Materials</h2>
-  <div class="grid">
-    <div class="card">
-      <i class="fa-solid fa-circle"></i>
-      <h3>PLA</h3>
-      <p>Easy to print, biodegradable, perfect for beginners and decorative parts.</p>
+  <section id="materials">
+    <h2>Filament Materials</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fa-solid fa-circle"></i>
+        <h3>PLA</h3>
+        <p>Easy to print, biodegradable, perfect for beginners and decorative parts.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-fire"></i>
+        <h3>PETG</h3>
+        <p>Stronger and more heat resistant than PLA with minimal warping.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-industry"></i>
+        <h3>ABS</h3>
+        <p>Durable and heat resistant, but requires enclosure and ventilation.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-wave-square"></i>
+        <h3>TPU</h3>
+        <p>Flexible filament ideal for phone cases, seals, and gaskets.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-circle-dot"></i>
+        <h3>PC</h3>
+        <p>Strong and durable filament ideal for functional parts.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-circle-dot"></i>
+        <h3>Impact PLA</h3>
+        <p>Impact-resistant filament ideal for functional parts.</p>
+      </div>
     </div>
-    <div class="card">
-      <i class="fa-solid fa-fire"></i>
-      <h3>PETG</h3>
-      <p>Stronger and more heat resistant than PLA with minimal warping.</p>
-    </div>
-    <div class="card">
-      <i class="fa-solid fa-industry"></i>
-      <h3>ABS</h3>
-      <p>Durable and heat resistant, but requires enclosure and ventilation.</p>
-    </div>
-    <div class="card">
-      <i class="fa-solid fa-wave-square"></i>
-      <h3>TPU</h3>
-      <p>Flexible filament ideal for phone cases, seals, and gaskets.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="failures">
-  <h2>Common Print Problems</h2>
-  <div class="grid">
-    <div class="card">
-      <i class="fa-solid fa-triangle-exclamation"></i>
-      <h3>Warping</h3>
-      <p>Use bed adhesion aids, correct bed temperature, and avoid drafts.</p>
+  <section id="failures">
+    <h2>Common Print Problems</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <h3>Warping</h3>
+        <p>Use bed adhesion aids, correct bed temperature, and avoid drafts.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-spaghetti-monster-flying"></i>
+        <h3>Stringing</h3>
+        <p>Lower nozzle temperature and enable retraction in slicer settings.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-bug"></i>
+        <h3>Layer Shifts</h3>
+        <p>Check belt tension and ensure motors are not overheating.</p>
+      </div>
     </div>
-    <div class="card">
-      <i class="fa-solid fa-spaghetti-monster-flying"></i>
-      <h3>Stringing</h3>
-      <p>Lower nozzle temperature and enable retraction in slicer settings.</p>
-    </div>
-    <div class="card">
-      <i class="fa-solid fa-bug"></i>
-      <h3>Layer Shifts</h3>
-      <p>Check belt tension and ensure motors are not overheating.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="software">
-  <h2>Slicers & Software</h2>
-  <div class="grid">
-    <div class="card">
-      <i class="fa-solid fa-scissors"></i>
-      <h3>Cura</h3>
-      <p>Free and beginner-friendly slicer with extensive printer profiles.</p>
+  <section id="software">
+    <h2>Slicers & Software</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fa-solid fa-scissors"></i>
+        <h3>Cura</h3>
+        <p>Free and beginner-friendly slicer with extensive printer profiles.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-gears"></i>
+        <h3>PrusaSlicer</h3>
+        <p>Advanced slicing features with excellent default presets.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-cloud"></i>
+        <h3>OctoPrint</h3>
+        <p>Remote printer control, webcam monitoring, and plugins.</p>
+      </div>
     </div>
-    <div class="card">
-      <i class="fa-solid fa-gears"></i>
-      <h3>PrusaSlicer</h3>
-      <p>Advanced slicing features with excellent default presets.</p>
+  </section>
+
+  <section id="comparison">
+    <h2>Printer Comparison</h2>
+    <div class="card" style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;">
+        <tr style="background:#f0f0f0;">
+          <th>Printer</th>
+          <th>Price</th>
+          <th>Bed Size</th>
+          <th>Best For</th>
+        </tr>
+        <tr>
+          <td>Ender 3</td>
+          <td>$200</td>
+          <td>220×220×250</td>
+          <td>Beginners</td>
+        </tr>
+        <tr>
+          <td>Prusa MK4</td>
+          <td>$800+</td>
+          <td>250×210×220</td>
+          <td>Reliability</td>
+        </tr>
+        <tr>
+          <td>Bambu X1 Carbon</td>
+          <td>$1200+</td>
+          <td>256×256×256</td>
+          <td>Speed & Automation</td>
+        </tr>
+      </table>
     </div>
-    <div class="card">
-      <i class="fa-solid fa-cloud"></i>
-      <h3>OctoPrint</h3>
-      <p>Remote printer control, webcam monitoring, and plugins.</p>
+  </section>
+
+  <section id="calculator">
+    <h2>Print Cost Calculator</h2>
+    <div class="grid">
+      <div class="card">
+        <label>Filament used (grams)</label>
+        <input id="grams" type="number" placeholder="e.g. 50" style="width:100%;padding:10px;margin:10px 0;">
+
+        <label>Filament price ($/kg)</label>
+        <input id="price" type="number" placeholder="e.g. 20" style="width:100%;padding:10px;margin:10px 0;">
+
+        <button onclick="calculateCost()"
+          style="padding:12px;width:100%;background:var(--primary);color:white;border:none;border-radius:8px;font-size:1rem;">Calculate</button>
+
+        <p id="result" style="margin-top:15px;font-weight:600;"></p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-calculator"></i>
+        <h3>Why it matters</h3>
+        <p>Knowing print cost helps pricing parts, managing waste, and choosing materials.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="comparison">
-  <h2>Printer Comparison</h2>
-  <div class="card" style="overflow-x:auto;">
-    <table style="width:100%;border-collapse:collapse;">
-      <tr style="background:#f0f0f0;">
-        <th>Printer</th>
-        <th>Price</th>
-        <th>Bed Size</th>
-        <th>Best For</th>
-      </tr>
-      <tr>
-        <td>Ender 3</td>
-        <td>$200</td>
-        <td>220×220×250</td>
-        <td>Beginners</td>
-      </tr>
-      <tr>
-        <td>Prusa MK4</td>
-        <td>$800+</td>
-        <td>250×210×220</td>
-        <td>Reliability</td>
-      </tr>
-      <tr>
-        <td>Bambu X1 Carbon</td>
-        <td>$1200+</td>
-        <td>256×256×256</td>
-        <td>Speed & Automation</td>
-      </tr>
-    </table>
-  </div>
-</section>
-
-<section id="calculator">
-  <h2>Print Cost Calculator</h2>
-  <div class="grid">
-    <div class="card">
-      <label>Filament used (grams)</label>
-      <input id="grams" type="number" placeholder="e.g. 50" style="width:100%;padding:10px;margin:10px 0;">
-
-      <label>Filament price ($/kg)</label>
-      <input id="price" type="number" placeholder="e.g. 20" style="width:100%;padding:10px;margin:10px 0;">
-
-      <button onclick="calculateCost()" style="padding:12px;width:100%;background:var(--primary);color:white;border:none;border-radius:8px;font-size:1rem;">Calculate</button>
-
-      <p id="result" style="margin-top:15px;font-weight:600;"></p>
+  <section id="safety">
+    <h2>Safety & Maintenance</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Ventilation</h3>
+        <p>Always ventilate when printing ABS, nylon, or carbon fiber materials.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <h3>Maintenance</h3>
+        <p>Regularly clean nozzles, lubricate rails, and level the bed.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-fire-extinguisher"></i>
+        <h3>Fire Safety</h3>
+        <p>Never leave printers unattended for long prints without safeguards.</p>
+      </div>
     </div>
-    <div class="card">
-      <i class="fa-solid fa-calculator"></i>
-      <h3>Why it matters</h3>
-      <p>Knowing print cost helps pricing parts, managing waste, and choosing materials.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="safety">
-  <h2>Safety & Maintenance</h2>
-  <div class="grid">
-    <div class="card">
-      <i class="fa-solid fa-shield-halved"></i>
-      <h3>Ventilation</h3>
-      <p>Always ventilate when printing ABS, nylon, or carbon fiber materials.</p>
-    </div>
-    <div class="card">
-      <i class="fa-solid fa-screwdriver-wrench"></i>
-      <h3>Maintenance</h3>
-      <p>Regularly clean nozzles, lubricate rails, and level the bed.</p>
-    </div>
-    <div class="card">
-      <i class="fa-solid fa-fire-extinguisher"></i>
-      <h3>Fire Safety</h3>
-      <p>Never leave printers unattended for long prints without safeguards.</p>
-    </div>
-  </div>
-</section>
+  <footer>
+    <p>© 2026 3D Printing Hub · Built with HTML, CSS & JavaScript</p>
+  </footer>
 
-<footer>
-  <p>© 2026 3D Printing Hub · Built with HTML, CSS & JavaScript</p>
-</footer>
+  <script>
+    // Scroll animations
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeIn 0.8s ease forwards';
+        }
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => observer.observe(card));
 
-<script>
-  // Scroll animations
-  const cards = document.querySelectorAll('.card');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = 'fadeIn 0.8s ease forwards';
+    // Cost calculator
+    function calculateCost() {
+      const grams = document.getElementById('grams').value;
+      const price = document.getElementById('price').value;
+      if (!grams || !price) {
+        document.getElementById('result').innerText = 'Please enter all values.';
+        return;
       }
-    });
-  }, { threshold: 0.2 });
-  cards.forEach(card => observer.observe(card));
-
-  // Cost calculator
-  function calculateCost() {
-    const grams = document.getElementById('grams').value;
-    const price = document.getElementById('price').value;
-    if (!grams || !price) {
-      document.getElementById('result').innerText = 'Please enter all values.';
-      return;
+      const cost = (grams / 1000) * price;
+      document.getElementById('result').innerText = `Estimated print cost: $${cost.toFixed(2)}`;
     }
-    const cost = (grams / 1000) * price;
-    document.getElementById('result').innerText = `Estimated print cost: $${cost.toFixed(2)}`;
-  }
-</script>
+  </script>
 
 </body>
+
 </html>
